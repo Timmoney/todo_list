@@ -1,10 +1,15 @@
+/*font type & background color*/
 body{
 	font-family: 'Roboto', sans-serif;
 	background: #1D976C;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
+/*
+background & text color
+margin --> with the next element
+padding --> the gap between text box and border
+*/
 h1 {
 	background: #2980b9;
 	color: white;
@@ -14,23 +19,38 @@ h1 {
 	font-weight: 400;
 }
 
+/*
+list-style --> remove dot
+margin --> with the next element
+padding 0 --> set the text box as the same as the border
+*/
 ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-
+/*
+height --> the height of the box
+inline-height --> the height of the text
+*/
 li {
 	background: #fff;
 	height: 40px;
 	line-height: 40px;
 	color: #666;
 }
-
+/*
+nth-child(2n) --> every other (even)
+*/
 li:nth-child(2n){
 	background: #f7f7f7;
 }
-
+/*
+box model:
+width --> set the width as same as border
+padding --> between the input and the border
+box-sizing match with border-box
+*/
 input {
 	color: #2980b9;;
 	font-size: 18px;
@@ -38,15 +58,17 @@ input {
 	width: 100%;
 	padding: 13px 13px 13px 20px;
 	box-sizing: border-box;
-	border: 3px solid rgba(0,0,0,0);
+	border: 3px solid rgba(0,0,0,0.1);
 }
-
+/*input:focus --> the border show up when you click on the input*/
 input:focus {
 	background: #fff;
 	border: 3px solid #2980b9;;
 	outline: none;
 }
-
+/*
+the initial is 0 width then after hover over, you get 40px;
+*/
 span {
 	background: #e74c3c;
 	height: 40px;
@@ -58,16 +80,18 @@ span {
 	transition: 0.2s linear;
 	opacity: 0;
 }
-
+/*
+when hover over, you get 40px width and opacity change from the original 0 to 1 
+*/
 li:hover span {
 	width: 40px;
 	opacity: 1.0;
 }
-
+/*move plus sign to the far right*/
 .fa-plus {
 	float: right;
 }
-
+/*the class to control the cross line*/
 .completed {
 	color: gray;
 	text-decoration: line-through;
